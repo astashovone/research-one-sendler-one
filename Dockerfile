@@ -1,4 +1,4 @@
-FROM arm64/python:3.9-alpine
+FROM aarch64/python
 COPY . /app 
 WORKDIR /app 
 RUN pip install -r requirements.txt
