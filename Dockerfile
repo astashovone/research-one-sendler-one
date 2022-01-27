@@ -1,5 +1,5 @@
-FROM aarch64/python
+FROM balenalib/aarch64-alpine-python:latest
 COPY . /app 
 WORKDIR /app 
-RUN pip3 install -r requirements.txt
-CMD ["python3", "main.py"]
+RUN pip install -r requirements.txt
+CMD ["python", "main.py"]
