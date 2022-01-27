@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sendler
+  labels:
+    app: sendler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sendler
+  template:
+    metadata:
+      labels:
+        app: sendler
+    spec:
+      containers:
+        - name: sendler
+          image: ghcr.io/astashovone/research-one-sendler-one:main
